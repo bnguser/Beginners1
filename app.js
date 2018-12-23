@@ -1,9 +1,16 @@
 const express = require('express');
 const app = express();
+const message = require('./message.js');
+let all_letters = '';
+
+console.log(message["letters"]);
 
 
 app.get("/",function(request,response){
-	response.send("<h1 style='text-align:center'>Hey Friends,Welcome to my app</h1>");
+	for(i=0; i<= message["letters"].length -1 ; i++){
+		all_letters += message["letters"][i] + "<br/>";
+	}
+	response.send(all_letters);
 })
 
 
