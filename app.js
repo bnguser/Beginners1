@@ -1,4 +1,4 @@
-const express = require('express');
+/*const express = require('express');
 const app = express();
 // const message = require('./message.js');
 // let all_letters = '';
@@ -15,7 +15,7 @@ app.get("/",function(request,response){
 })
 
 app.get("/users/:name",function(req,res){
-	res.send(req["params"]["name"]);
+	resq.send(req["params"]["name"]);
 })
 
 
@@ -25,4 +25,9 @@ app.listen(3000,function(error){
 	}else{
 		console.log("listening on port");
 	}
-})
+})*/
+const http = require('http');
+
+http.createServer(function(request, response){
+
+}).listen(3000);
